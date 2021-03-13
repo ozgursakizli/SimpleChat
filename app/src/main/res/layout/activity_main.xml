@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edt_nickname"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_margin="20dp"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
         android:hint="@string/nickname_hint"
-        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:inputType="textFilter"
         android:maxLines="1"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
