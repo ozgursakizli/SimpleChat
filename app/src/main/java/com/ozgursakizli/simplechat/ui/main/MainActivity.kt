@@ -3,7 +3,6 @@ package com.ozgursakizli.simplechat.ui.main
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputFilter
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.ozgursakizli.simplechat.R
 import com.ozgursakizli.simplechat.databinding.ActivityMainBinding
@@ -11,11 +10,12 @@ import com.ozgursakizli.simplechat.ui.ChatActivity
 import com.ozgursakizli.simplechat.utilities.AppDataConstants
 import com.ozgursakizli.simplechat.utilities.AppDataConstants.KEY_NICKNAME
 import com.ozgursakizli.simplechat.utilities.shortToast
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val mainViewModel: MainViewModel by viewModels()
+    private val mainViewModel: MainViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
             putExtra(KEY_NICKNAME, nickname)
             startActivity(this)
         }
+        binding.edtNickname.text?.clear()
     }
 
 }
