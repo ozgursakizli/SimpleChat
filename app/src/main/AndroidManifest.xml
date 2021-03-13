@@ -3,7 +3,7 @@
     package="com.ozgursakizli.simplechat">
 
     <application
-        android:name=".SimpleChatApplication"
+        android:name=".application.SimpleChatApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +12,7 @@
         android:theme="@style/Theme.SimpleChat">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.ChatActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

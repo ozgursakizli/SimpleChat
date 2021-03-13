@@ -1,13 +1,14 @@
-package com.ozgursakizli.simplechat
+package com.ozgursakizli.simplechat.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ozgursakizli.simplechat.R
 
-class MainActivity : AppCompatActivity() {
+class ChatActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_chat)
     }
 
 }
