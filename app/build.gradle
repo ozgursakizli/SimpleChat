@@ -15,7 +15,9 @@ android {
         targetSdkVersion globalConfiguration["targetSdkVersion"]
         versionCode globalConfiguration["appVersionCode"]
         versionName globalConfiguration["appVersionName"]
-
+        buildFeatures {
+            viewBinding true
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -33,7 +35,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
