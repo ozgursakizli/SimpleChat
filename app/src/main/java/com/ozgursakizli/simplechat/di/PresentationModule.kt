@@ -15,6 +15,9 @@ val presentationModule = module {
     factory {
         Dispatchers.IO
     }
+
+    // region ViewModels
     viewModel { MainViewModel() }
-    viewModel { ChatViewModel() }
+    viewModel { ChatViewModel(get()) }
+    // endregion
 }

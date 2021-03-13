@@ -39,6 +39,11 @@ ext {
     googleMaterialVersion = '1.3.0'
     // Koin
     koinVersion = '2.0.1'
+    // Retrofit
+    squareupretrofitVersion = '2.9.0'
+    squareupConverterGsonVersion = '2.9.0'
+    squareupOkHttpVersion = '4.9.0'
+    squareupLoggingInterceptorVersion = '4.9.0'
 
     // Test Libraries
     jUnitVersion = '4.13.2'
@@ -47,16 +52,20 @@ ext {
 
     // Module dependencies
     appDependencies = [
-            corektx           : "androidx.core:core-ktx:${corektxVersion}",
-            appcompat         : "androidx.appcompat:appcompat:${appcompatVersion}",
-            activity          : "androidx.activity:activity-ktx:${activityVersion}",
-            constraintlayout  : "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}",
-            lifecycleViewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleVersion}",
-            lifecycleLiveData : "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycleVersion}",
-            googleMaterial    : "com.google.android.material:material:${googleMaterialVersion}",
-            koinCore          : "org.koin:koin-core:${koinVersion}",
-            koinAndroid       : "org.koin:koin-android:${koinVersion}",
-            koinViewModel     : "org.koin:koin-androidx-viewmodel:${koinVersion}"
+            corektx                   : "androidx.core:core-ktx:${corektxVersion}",
+            appcompat                 : "androidx.appcompat:appcompat:${appcompatVersion}",
+            activity                  : "androidx.activity:activity-ktx:${activityVersion}",
+            constraintlayout          : "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}",
+            lifecycleViewModel        : "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleVersion}",
+            lifecycleLiveData         : "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycleVersion}",
+            googleMaterial            : "com.google.android.material:material:${googleMaterialVersion}",
+            koinCore                  : "org.koin:koin-core:${koinVersion}",
+            koinAndroid               : "org.koin:koin-android:${koinVersion}",
+            koinViewModel             : "org.koin:koin-androidx-viewmodel:${koinVersion}",
+            squareupretrofit          : "com.squareup.retrofit2:retrofit:${squareupretrofitVersion}",
+            squareupConverterGson     : "com.squareup.retrofit2:converter-gson:${squareupConverterGsonVersion}",
+            squareupOkHttp            : "com.squareup.okhttp3:logging-interceptor:${squareupOkHttpVersion}",
+            squareupLoggingInterceptor: "com.squareup.okhttp3:okhttp:${squareupLoggingInterceptorVersion}",
     ]
     testDependencies = [
             jUnit       : "junit:junit:${jUnitVersion}",

@@ -18,6 +18,7 @@ class ChatActivity : AppCompatActivity() {
         setContentView(binding.root)
         loadIntent()
         initUi()
+        observeViewModel()
     }
 
     private fun loadIntent() {
@@ -31,6 +32,12 @@ class ChatActivity : AppCompatActivity() {
             it.title = nickname
             it.setDisplayHomeAsUpEnabled(true)
         }
+    }
+
+    private fun observeViewModel() {
+        chatViewModel.messages.observe(this, {
+        })
+        chatViewModel.getMessages()
     }
 
 }

@@ -1,6 +1,7 @@
 package com.ozgursakizli.simplechat.application
 
 import android.app.Application
+import com.ozgursakizli.simplechat.di.dataModule
 import com.ozgursakizli.simplechat.di.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -13,7 +14,7 @@ class SimpleChatApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@SimpleChatApplication)
-            modules(listOf(presentationModule))
+            modules(listOf(presentationModule, dataModule))
         }
     }
 
