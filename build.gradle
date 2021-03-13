@@ -20,6 +20,31 @@ allprojects {
     }
 }
 
+ext {
+    // Version Control
+    appVersionCode = 1
+    appVersionName = "1.0.0"
+    // Build Control
+    compileSdkVersion = 30
+    minSdkVersion = 21
+    targetSdkVersion = 30
+    buildToolsVersion = "30.0.3"
+    // Android
+    corektxVersion = '1.3.2'
+    appcompatVersion = '1.2.0'
+    constraintlayoutVersion = '2.0.4'
+    // Google
+    googleMaterialVersion = '1.3.0'
+
+    // Module dependencies
+    appDependencies = [
+            corektx         : "androidx.core:core-ktx:${corektxVersion}",
+            appcompat       : "androidx.appcompat:appcompat:${appcompatVersion}",
+            constraintlayout: "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}",
+            googleMaterial  : "com.google.android.material:material:${googleMaterialVersion}"
+    ]
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
