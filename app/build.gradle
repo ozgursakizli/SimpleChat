@@ -51,6 +51,10 @@ dependencies {
     implementation appDependencies.lifecycleLiveData
     // Google
     implementation appDependencies.googleMaterial
+    // Koin
+    implementation appDependencies.koinCore
+    implementation appDependencies.koinAndroid
+    implementation appDependencies.koinViewModel
 
     // Test Libraries
     testImplementation testDependencies.jUnit

@@ -37,6 +37,8 @@ ext {
     lifecycleVersion = '2.3.0'
     // Google
     googleMaterialVersion = '1.3.0'
+    // Koin
+    koinVersion = '2.0.1'
 
     // Test Libraries
     jUnitVersion = '4.13.2'
@@ -51,7 +53,10 @@ ext {
             constraintlayout  : "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}",
             lifecycleViewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleVersion}",
             lifecycleLiveData : "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycleVersion}",
-            googleMaterial    : "com.google.android.material:material:${googleMaterialVersion}"
+            googleMaterial    : "com.google.android.material:material:${googleMaterialVersion}",
+            koinCore          : "org.koin:koin-core:${koinVersion}",
+            koinAndroid       : "org.koin:koin-android:${koinVersion}",
+            koinViewModel     : "org.koin:koin-androidx-viewmodel:${koinVersion}"
     ]
     testDependencies = [
             jUnit       : "junit:junit:${jUnitVersion}",
