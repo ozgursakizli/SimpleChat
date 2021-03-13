@@ -1,5 +1,6 @@
 package com.ozgursakizli.simplechat.di
 
+import com.ozgursakizli.simplechat.ui.chat.ChatViewModel
 import com.ozgursakizli.simplechat.ui.main.MainViewModel
 import kotlin.coroutines.CoroutineContext
 import kotlinx.coroutines.Dispatchers
@@ -14,7 +15,6 @@ val presentationModule = module {
     factory {
         Dispatchers.IO
     }
-    viewModel {
-        MainViewModel()
-    }
+    viewModel { MainViewModel() }
+    viewModel { ChatViewModel() }
 }

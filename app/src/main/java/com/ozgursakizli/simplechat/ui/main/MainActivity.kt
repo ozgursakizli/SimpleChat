@@ -6,7 +6,7 @@ import android.text.InputFilter
 import androidx.appcompat.app.AppCompatActivity
 import com.ozgursakizli.simplechat.R
 import com.ozgursakizli.simplechat.databinding.ActivityMainBinding
-import com.ozgursakizli.simplechat.ui.ChatActivity
+import com.ozgursakizli.simplechat.ui.chat.ChatActivity
 import com.ozgursakizli.simplechat.utilities.AppDataConstants
 import com.ozgursakizli.simplechat.utilities.AppDataConstants.KEY_NICKNAME
 import com.ozgursakizli.simplechat.utilities.shortToast

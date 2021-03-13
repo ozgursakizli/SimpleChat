@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.ChatActivity"
+            android:name=".ui.chat.ChatActivity"
             android:screenOrientation="portrait" />
     </application>
 
