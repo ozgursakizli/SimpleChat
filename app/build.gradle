@@ -40,13 +40,15 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     def appDependencies = rootProject.ext.appDependencies
     def testDependencies = rootProject.ext.testDependencies
     // Android
     implementation appDependencies.corektx
     implementation appDependencies.appcompat
+    implementation appDependencies.activity
     implementation appDependencies.constraintlayout
+    implementation appDependencies.lifecycleViewModel
+    implementation appDependencies.lifecycleLiveData
     // Google
     implementation appDependencies.googleMaterial
 
