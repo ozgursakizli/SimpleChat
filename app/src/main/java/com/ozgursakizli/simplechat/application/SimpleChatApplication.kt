@@ -1,4 +1,4 @@
-package com.ozgursakizli.simplechat
+package com.ozgursakizli.simplechat.application
 
 import android.app.Application
 
