@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SimpleChat</string>
+    <string name="start_chat">Devam Et</string>
+    <string name="nickname_hint">Takma ad girin</string>
+    <string name="nickname_error">2 karakterden uzun bir takma ad girmelisiniz</string>
+</resources>
