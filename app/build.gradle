@@ -40,15 +40,16 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     def appDependencies = rootProject.ext.appDependencies
+    def testDependencies = rootProject.ext.testDependencies
     // Android
     implementation appDependencies.corektx
     implementation appDependencies.appcompat
     implementation appDependencies.constraintlayout
-    // Gogle
+    // Google
     implementation appDependencies.googleMaterial
 
-    // Test
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // Test Libraries
+    testImplementation testDependencies.jUnit
+    androidTestImplementation testDependencies.jUnitExt
+    androidTestImplementation testDependencies.espressoCore
 }

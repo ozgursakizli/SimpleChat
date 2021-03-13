@@ -36,12 +36,22 @@ ext {
     // Google
     googleMaterialVersion = '1.3.0'
 
+    // Test Libraries
+    jUnitVersion = '4.13.2'
+    jUnitExtVersion = '1.1.2'
+    espressoCoreVersion = '3.3.0'
+
     // Module dependencies
     appDependencies = [
             corektx         : "androidx.core:core-ktx:${corektxVersion}",
             appcompat       : "androidx.appcompat:appcompat:${appcompatVersion}",
             constraintlayout: "androidx.constraintlayout:constraintlayout:${constraintlayoutVersion}",
             googleMaterial  : "com.google.android.material:material:${googleMaterialVersion}"
+    ]
+    testDependencies = [
+            jUnit       : "junit:junit:${jUnitVersion}",
+            jUnitExt    : "androidx.test.ext:junit:${jUnitExtVersion}",
+            espressoCore: "androidx.test.espresso:espresso-core:${espressoCoreVersion}"
     ]
 }
 
