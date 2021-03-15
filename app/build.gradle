@@ -15,6 +15,7 @@ android {
         targetSdkVersion globalConfiguration["targetSdkVersion"]
         versionCode globalConfiguration["appVersionCode"]
         versionName globalConfiguration["appVersionName"]
+        vectorDrawables.useSupportLibrary = true
         buildFeatures {
             viewBinding true
         }

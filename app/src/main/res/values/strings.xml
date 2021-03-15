@@ -4,4 +4,5 @@
     <string name="nickname_hint">Enter nickname</string>
     <string name="nickname_error">You should enter a nickname longer than 2 characters</string>
     <string name="start_chat">Continue</string>
+    <string name="msg_box_hint">Hello</string>
 </resources>

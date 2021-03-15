@@ -6,9 +6,11 @@ import android.text.InputFilter
 import androidx.appcompat.app.AppCompatActivity
 import com.ozgursakizli.simplechat.R
 import com.ozgursakizli.simplechat.databinding.ActivityMainBinding
+import com.ozgursakizli.simplechat.managers.SessionManager
+import com.ozgursakizli.simplechat.models.ApiUser
 import com.ozgursakizli.simplechat.ui.chat.ChatActivity
 import com.ozgursakizli.simplechat.utilities.AppDataConstants
-import com.ozgursakizli.simplechat.utilities.AppDataConstants.KEY_NICKNAME
+import com.ozgursakizli.simplechat.utilities.Utils
 import com.ozgursakizli.simplechat.utilities.shortToast
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -21,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if (SessionManager.user != null) {
+            navigateToChat()
+            return
+        }
+
         initUi()
         initClicks()
         observeViewModel()
@@ -51,11 +59,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openChat(nickname: String) {
-        Intent(this, ChatActivity::class.java).apply {
-            putExtra(KEY_NICKNAME, nickname)
-            startActivity(this)
-        }
+        val user = ApiUser(Utils.generateUserId(), null, nickname)
+        SessionManager.logInUser(user)
+        navigateToChat()
         binding.edtNickname.text?.clear()
     }
 
+    private fun navigateToChat() {
+        Intent(this, ChatActivity::class.java).apply {
+            startActivity(this)
+        }
+        finish()
+    }
 }

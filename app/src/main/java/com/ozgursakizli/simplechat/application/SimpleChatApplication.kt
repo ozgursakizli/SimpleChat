@@ -9,8 +9,16 @@ import org.koin.core.context.startKoin
 
 class SimpleChatApplication : Application() {
 
+    companion object {
+        @Volatile
+        private lateinit var INSTANCE: SimpleChatApplication
+
+        fun getInstance(): SimpleChatApplication = INSTANCE
+    }
+
     override fun onCreate() {
         super.onCreate()
+        INSTANCE = this
         startKoin {
             androidLogger()
             androidContext(this@SimpleChatApplication)
