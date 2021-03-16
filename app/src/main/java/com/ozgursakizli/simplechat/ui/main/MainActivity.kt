@@ -23,15 +23,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initUi()
+        initClicks()
+        observeViewModel()
 
         if (SessionManager.user != null) {
             navigateToChat()
             return
         }
-
-        initUi()
-        initClicks()
-        observeViewModel()
     }
 
     /**
@@ -69,6 +68,6 @@ class MainActivity : AppCompatActivity() {
         Intent(this, ChatActivity::class.java).apply {
             startActivity(this)
         }
-        finish()
     }
+
 }
