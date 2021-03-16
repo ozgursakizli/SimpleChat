@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 def globalConfiguration = rootProject.extensions.getByName("ext")
@@ -68,6 +69,9 @@ dependencies {
     implementation appDependencies.squareupConverterGson
     implementation appDependencies.squareupOkHttp
     implementation appDependencies.squareupLoggingInterceptor
+    // Glide
+    implementation appDependencies.glide
+    kapt appDependencies.glideCompiler
     // Test Libraries
     testImplementation testDependencies.jUnit
     androidTestImplementation testDependencies.jUnitExt

@@ -1,8 +1,11 @@
 package com.ozgursakizli.simplechat.utilities
 
+import com.ozgursakizli.simplechat.BuildConfig
 import java.util.*
 
 object Utils {
+
+    fun isDebugMode(): Boolean = BuildConfig.DEBUG
 
     fun generateUserId() = UUID.randomUUID().toString()
 

@@ -44,6 +44,9 @@ ext {
     squareupConverterGsonVersion = '2.9.0'
     squareupOkHttpVersion = '4.9.0'
     squareupLoggingInterceptorVersion = '4.9.0'
+    // Glide
+    glideVersion = '4.11.0'
+    glideCompilerVersion = '4.11.0'
 
     // Test Libraries
     jUnitVersion = '4.13.2'
@@ -66,6 +69,8 @@ ext {
             squareupConverterGson     : "com.squareup.retrofit2:converter-gson:${squareupConverterGsonVersion}",
             squareupOkHttp            : "com.squareup.okhttp3:logging-interceptor:${squareupOkHttpVersion}",
             squareupLoggingInterceptor: "com.squareup.okhttp3:okhttp:${squareupLoggingInterceptorVersion}",
+            glide                     : "com.github.bumptech.glide:glide:${glideVersion}",
+            glideCompiler             : "com.github.bumptech.glide:compiler:${glideCompilerVersion}"
     ]
     testDependencies = [
             jUnit       : "junit:junit:${jUnitVersion}",
