@@ -1,6 +1,7 @@
 package com.ozgursakizli.simplechat.utilities
 
 import com.ozgursakizli.simplechat.BuildConfig
+import java.text.SimpleDateFormat
 import java.util.*
 
 object Utils {
@@ -17,5 +18,7 @@ object Utils {
             sb.append(allowedChars[random.nextInt(allowedChars.length)])
         return sb.toString()
     }
+
+    fun formatTime(timeInMillis: Long): String? = SimpleDateFormat("dd.MM.yyyy, HH:mm", Locale.getDefault()).format(timeInMillis)
 
 }
